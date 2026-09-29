@@ -25,9 +25,9 @@ function App() {
       <p>Expected: B moves left and is deselected; onSelectChange reports an empty target selection.</p>
       <p>Actual in antd 6.6.5: B moves left but stays checked, and onSelectChange is not called for removal.</p>
       <label>One-way mode: <Switch checked={oneWay} onChange={setOneWay} /></label>
-      <pre>targetKeys: {JSON.stringify(targetKeys)}
-selectedKeys: {JSON.stringify(selectedKeys)}
-onSelectChange calls: {selectionEvents}</pre>
+      <p data-testid="target-keys">targetKeys: {JSON.stringify(targetKeys)}</p>
+      <p data-testid="selected-keys">selectedKeys: {JSON.stringify(selectedKeys)}</p>
+      <p data-testid="selection-events">onSelectChange calls: {selectionEvents}</p>
       <Transfer
         dataSource={dataSource}
         targetKeys={targetKeys}
